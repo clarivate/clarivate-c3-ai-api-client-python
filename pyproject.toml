@@ -1,0 +1,25 @@
+[project]
+name = "clarivate.aiapi"
+
+[tool.poetry]
+name = "ai-api"
+version = "0.1.0"
+description = ""
+authors = ["Clarivate"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "clarivate/aiapi", from = "src/"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+httpx = "^0.25.1"
+platformdirs = "^3.11.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.setuptools.packages.find]
+where = ["src/"]
+include = ["clarivate.aiapi"]
